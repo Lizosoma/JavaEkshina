@@ -1,3 +1,5 @@
+package Intro;
+
 public class IntroTasks {
     public static void main(String[] args) {
         System.out.println(introTask3Digits(456));

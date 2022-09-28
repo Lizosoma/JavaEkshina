@@ -1,3 +1,5 @@
+package Intro;
+
 import java.util.Scanner;
 
 public class IntroTaskQuadraticEquation {
@@ -6,7 +8,7 @@ public class IntroTaskQuadraticEquation {
         int a = input.nextInt();
         int b = input.nextInt();
         int c = input.nextInt();
-        int disc = (int)Math.pow(b, 2) - 4 * a * c;
+        int disc = (int) Math.pow(b, 2) - 4 * a * c;
         if (a == 0) {
             if (b == 0) {
                 if (c == 0) {

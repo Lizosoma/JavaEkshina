@@ -1,3 +1,5 @@
+package Arrays;
+
 import java.util.Arrays;
 
 
@@ -44,22 +46,25 @@ public class ArraysTasks {
     }
 
     private static double mean(int[] arrayOfInts) {
-        int sum = 0;
-        for (int i = 0; i < arrayOfInts.length; i++) {
-            sum += arrayOfInts[i];
+        double sum = 0;
+        for (int arrayOfInt : arrayOfInts) {
+            sum += arrayOfInt;
         }
         return sum / arrayOfInts.length;
     }
 
     public static void shift(int[] arrayOfInts) {
-        int last = arrayOfInts[arrayOfInts.length - 1];
-        for (int i = arrayOfInts.length - 2; i >= 0; i--) {
-            arrayOfInts[i + 1] = arrayOfInts[i];
+        if (arrayOfInts.length != 0) {
+            int last = arrayOfInts[arrayOfInts.length - 1];
+            for (int i = arrayOfInts.length - 2; i >= 0; i--) {
+                arrayOfInts[i + 1] = arrayOfInts[i];
+            }
+            arrayOfInts[0] = last;
         }
-        arrayOfInts[0] = last;
     }
 
     public static int[] copyShift(int[] arrayOfInts) {
+        if (arrayOfInts.length != 0){
         int[] arrayOfIntsNew = new int[arrayOfInts.length];
         int last = arrayOfInts[arrayOfInts.length - 1];
         arrayOfIntsNew[0] = last;
@@ -67,5 +72,7 @@ public class ArraysTasks {
             arrayOfIntsNew[i + 1] = arrayOfInts[i];
         }
         return arrayOfIntsNew;
+        }
+        return new int[0];
     }
 }

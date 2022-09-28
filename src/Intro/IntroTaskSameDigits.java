@@ -1,10 +1,12 @@
+package Intro;
+
 import java.util.Scanner;
 
-public class IntroTask3Digits {
+public class IntroTaskSameDigits {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
-        if (number > 99 && number < 1000) {
+        if (number % 10 == number / 10 % 10) {
             System.out.println("Yes");
         } else {
             System.out.println("No");
